@@ -1,0 +1,76 @@
+def ordenarAlumnos():
+    try:
+        
+        inconsistencia = 0
+        Grabado = 0
+        
+#lineas parseadas        
+        def parse(linea):
+            linea = linea.strip()
+            if not linea:
+                return None
+            partes=[p.strip() for p in linea.split(";")]
+            
+            if len(linea) !=3:
+                raise ValueError("El archivo tiene una configuración incorrecta.")
+            legajo = int(partes[0].strip())
+            nombre = partes[1].strip()
+            turno = partes[2].strip().upper()
+            if turno not in ("M","T","N"):
+                raise ValueError ("El archivo tiene turnos invalidos.")
+            
+            return legajo, nombre, turno
+
+#Funcion que lee archivos
+        def siguienteDocumento(archivo):
+            while True:
+                linea = archivo.readline()
+                if not linea:
+                    return None
+                linea=linea.strip()
+                if not linea:
+                    continue
+                return parse(linea)
+
+#Abrir archivos:
+        with open ("entrada1.txt", "r", encoding="utf-8") as entrada1, \
+             open ("entrada2.txt", "r", encoding="utf-8") as entrada2, \
+             open ("salida.txt", "w", encoding="utf-8") as salida:
+            
+            data1 = siguienteDocumento(entrada1)
+            data2 = siguienteDocumento(entrada2)
+            
+            salida.write("Inscriptos \n")
+            
+#comparar datos entre ellos:
+            
+            while data1 is not None or data2 is not None:
+                
+                if data1 is not None or data2 is not None:
+                    
+                    legajo1, nombre1, turno1 = data1
+                    legajo2, nombre2, turno2 = data2
+                    
+                    if legajo1 < legajo2:
+                        salida.write(f"{legajo1};{nombre1};{turno1} \n")
+                        grabado += 1
+                    
+                    elif legajo2 < legajo1:
+                        salida.write(f"{legajo2};{nombre2};{turno2} \n")
+                        grabado += 1
+                        
+                    else:
+                        if turno1 != turno2:
+                            print(f"Inconsistencia, el legajo: {legajo1} se encuentra registrado para los turnos: {turno1} y {turno2}")
+                            inconsistencia =+1
+
+
+
+
+
+    except FileNotFoundError: ("El archivo no se encuentra en la carpeta.")
+    
+    
+ordenarAlumnos()
+
+print("Fin del programa")

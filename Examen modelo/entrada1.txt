@@ -1,0 +1,5 @@
+1001;Ana Gomez;M
+1003;Carlos Pérez;T
+1005;Luisa Diaz;N
+9999;Mario López;N
+1010;Juan Ruiz;T

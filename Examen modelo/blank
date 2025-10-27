@@ -1,0 +1,39 @@
+def funcionPrincipal():
+    try:
+        variable1=0
+        variable2=0
+        
+        def parse(linea):
+            linea=linea.strip
+            if not linea:
+                return None
+            
+            parte= [p.strip() for p in linea.split(";")]
+            
+            dato1 = parte[0].strip()
+            dato2 = parte[1].strip()
+            dato3 = parte[2].strip()
+            
+            return dato1, dato2, dato3
+
+        def leerLineaPorLinea(archivo):
+            for linea in archivo:
+                linea=linea.strip()
+                if not linea:
+                    continue
+                return parse(linea)
+            return None
+        
+        with open("archivo1.txt", "r", encoding="utf-8") as archivo1, \
+             open("salida.txt", "w", encoding="utf-8") as salida:
+            
+            guardarInformacion1 = leerLineaPorLinea(entrada1)
+            
+            salida.write("Titulo")
+            
+            
+
+    except FileNotFoundError:
+        print("El archivo no se encuentra en la carpeta")
+        
+funcionPrincipal()

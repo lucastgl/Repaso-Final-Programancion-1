@@ -1,0 +1,9 @@
+Alumnos inscriptos correctamente: 
+1001, Ana Gomez, M
+1003, Carlos Pérez, T
+1005, Luisa Diaz, N
+1100, Maria Lopez, T
+2230, Tomas Rodriguez, M
+6849, Juan Damiano, N
+4646, Pepe Lombardo, N
+1010, Juan Ruiz, T 

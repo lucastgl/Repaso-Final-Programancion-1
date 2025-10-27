@@ -1,0 +1,5 @@
+1100;Maria Lopez;T
+2230;Tomas Rodriguez;M
+6849;Juan Damiano;N
+4646;Pepe Lombardo;N
+9999;Mario López;M
