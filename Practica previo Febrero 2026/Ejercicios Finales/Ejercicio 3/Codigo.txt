@@ -1,0 +1,56 @@
+def lecturaDeArchivo(lineaNorte, lineaSur):
+    datosNorte = lineaNorte.split(";")
+    miniTuplaNorte = (datosNorte[0],datosNorte[1],int(datosNorte[2]))
+    
+    if(lineaSur != ""):
+        datosSur = lineaSur.split(";")
+        miniTuplaSur = (datosSur[0],datosSur[1],int(datosSur[2]))
+
+    return miniTuplaNorte, miniTuplaSur
+
+def diccionarioArchivos(tuplaNorte, tuplaSur):
+    diccionarioNorte = {}
+    diccionarioSur = {}
+
+    for elemento in tuplaNorte:
+        diccionario[elemnto[0]] = (elemento[1],elemento[2])
+
+    for elemento in tuplaNorte:
+        diccionario[elemnto[0]] = (elemento[1],elemento[2])
+
+try:
+
+    tuplaNorte = ()
+    tuplaSur = ()
+
+    archivoNorte = open("deposito_norte.txt","rt",encoding="UTF8")
+    archivoSur = open("deposito_sur.txt","rt",encoding="UTF8")
+    salida = open("archivo_salida.txt","wt",encoding="UTF8")
+
+    lineaNorte = archivoNorte.readline()
+    lineaSur = archivoSur.readline()
+
+    while lineaNorte != "":
+        miniTuplaNorte, miniTuplaSur = lecturaDeArchivo(lineaNorte, lineaSur)
+        tuplaNorte = tuplaNorte + (miniTuplaNorte,)
+        tuplaSur = tuplaSur + (miniTuplaSur,)
+
+        lineaNorte = archivoNorte.readline()
+        lineaSur = archivoSur.readline()
+
+    diccionarioNorte, diccionarioSur = diccionarioArchivos(tuplaNorte, tuplaSur)
+
+    print(diccionarioNorte)
+    print(diccionarioSur)
+
+except FileNotFoundError as mensaje:
+    print("No se pudo encontar el arhivo", mesaje)
+except OSError as mensaje:
+    print("No se pudo leer el archivo", mensaje)
+finally:
+    try:
+        archivoNorte.close()
+        archivoSur.close()
+        salida.close()
+    except NameError:
+        pass

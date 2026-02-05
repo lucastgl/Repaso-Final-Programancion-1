@@ -1,0 +1,15 @@
+1001;Arroz Largo Fino;120
+1002;Fideos Spaghetti;85
+1003;Azucar;200
+1005;Yerba Mate;60
+1007;Detergente Limon;40
+1009;Galletitas Chocolate;75
+1011;Cafe Molido;30
+1012;Te Verde;55
+1014;Harina 000;140
+1016;Aceite Girasol;50
+1018;Lavandina;90
+1020;Shampoo;25
+1022;Queso Rallado;18
+1024;Leche Entera;110
+1026;Mermelada Frutilla;35

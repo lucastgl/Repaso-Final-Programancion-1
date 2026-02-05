@@ -1,0 +1,16 @@
+Se tienen dos archivos con los datos de los alumnos inscriptos para rendir un examen. 
+Cada registro contiene:
+
+Número de legajo
+Nombre
+Turno (M: Mañana; T: Tarde; N: Noche)
+
+Existe un registro por cada alumno. Los archivos se encuentran ordenados por número de legajo. 
+Obtener un archivo único con los inscriptos para el examen en el que conste la misma información, el que también debe quedar ordenado por número de legajo. 
+Debido a errores en la carga de datos puede haber alumnos que aparezcan inscriptos en más de un turno. 
+Esos alumnos deberán mostrarse por pantalla en un listado de inconsistencias, y no se grabarán en el archivo de salida. 
+Al finalizar el proceso informar la cantidad de registros grabados y la cantidad de inconsistencias halladas.
+
+Se adjuntan dos archivos llamados alumnos1.txt y alumnos2.txt, ambos con formato CSV (valores separados por punto y coma). 
+Los mismos han sido creados con codificación UTF8, por lo que deberá agregarse el parámetro encoding="UTF8" en el momento de su apertura. 
+El programa debe servir para estos archivos o cualquier otro que respete el mismo formato.

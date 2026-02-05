@@ -1,0 +1,9 @@
+Esta guia de ejercicios de práctica se basa en el notion: 
+https://www.notion.so/teor-a-2f6fe89f85d9819189f8dd3e5a53e849?source=copy_link
+
+Separando los ejercicios por los temas dados en cada clase y sumando
+un apartado de ejercicios integradores para el FINAL.
+
+Los PDF's son impresiones de la teoría del Notion y los ejercicios finales 
+fueron hechos a base de estos de dicha teoría con ejemplos de 
+finales previamente evaluados.
